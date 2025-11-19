@@ -16,6 +16,7 @@ docker run -e "TERM=xterm-256color" -t --rm -it \
   -v "$WORKSPACE_DIR:/trainee" \
   -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
   --env=DISPLAY="$DISPLAY_SETTING" \
+  --env USER=ros \
   -v /dev:/dev \
   --device-cgroup-rule='c *:* rmw' \
   "$IMAGE_NAME"
