@@ -1,0 +1,3 @@
+[console_scripts]
+controller = arm_simulation.controller:main
+

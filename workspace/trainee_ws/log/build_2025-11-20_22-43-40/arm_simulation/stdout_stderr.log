@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing arm_simulation.egg-info/PKG-INFO
+writing dependency_links to arm_simulation.egg-info/dependency_links.txt
+writing entry points to arm_simulation.egg-info/entry_points.txt
+writing requirements to arm_simulation.egg-info/requires.txt
+writing top-level names to arm_simulation.egg-info/top_level.txt
+reading manifest file 'arm_simulation.egg-info/SOURCES.txt'
+writing manifest file 'arm_simulation.egg-info/SOURCES.txt'
+running build_ext
+Creating /trainee/workspace/trainee_ws/install/arm_simulation/lib/python3.10/site-packages/arm-simulation.egg-link (link to .)
+Installing controller script to /trainee/workspace/trainee_ws/install/arm_simulation/lib/arm_simulation
+
+Installed /trainee/workspace/trainee_ws/build/arm_simulation
+running symlink_data

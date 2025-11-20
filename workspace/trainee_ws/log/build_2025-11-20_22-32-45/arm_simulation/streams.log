@@ -1,0 +1,24 @@
+[0.913s] Invoking command in '/trainee/workspace/trainee_ws/build/arm_simulation': PYTHONPATH=/trainee/workspace/trainee_ws/build/arm_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws/install/arm_simulation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /trainee/workspace/trainee_ws/build/arm_simulation/build --no-deps symlink_data
+[1.295s] running develop
+[1.514s] running egg_info
+[1.515s] writing arm_simulation.egg-info/PKG-INFO
+[1.515s] writing dependency_links to arm_simulation.egg-info/dependency_links.txt
+[1.515s] writing entry points to arm_simulation.egg-info/entry_points.txt
+[1.515s] writing requirements to arm_simulation.egg-info/requires.txt
+[1.515s] writing top-level names to arm_simulation.egg-info/top_level.txt
+[1.517s] reading manifest file 'arm_simulation.egg-info/SOURCES.txt'
+[1.524s] writing manifest file 'arm_simulation.egg-info/SOURCES.txt'
+[1.525s] running build_ext
+[1.526s] Creating /trainee/workspace/trainee_ws/install/arm_simulation/lib/python3.10/site-packages/arm-simulation.egg-link (link to .)
+[1.527s] 
+[1.527s] Installed /trainee/workspace/trainee_ws/build/arm_simulation
+[1.527s] running symlink_data
+[1.528s] symbolically linking /trainee/workspace/trainee_ws/build/arm_simulation/resource/arm_simulation -> /trainee/workspace/trainee_ws/install/arm_simulation/share/ament_index/resource_index/packages
+[1.528s] symbolically linking /trainee/workspace/trainee_ws/build/arm_simulation/package.xml -> /trainee/workspace/trainee_ws/install/arm_simulation/share/arm_simulation
+[1.528s] creating /trainee/workspace/trainee_ws/install/arm_simulation/share/arm_simulation/launch
+[1.528s] symbolically linking /trainee/workspace/trainee_ws/build/arm_simulation/launch/arm_launch.py -> /trainee/workspace/trainee_ws/install/arm_simulation/share/arm_simulation/launch
+[1.528s] creating /trainee/workspace/trainee_ws/install/arm_simulation/share/arm_simulation/worlds
+[1.528s] symbolically linking /trainee/workspace/trainee_ws/build/arm_simulation/worlds/basic_arm.wbt -> /trainee/workspace/trainee_ws/install/arm_simulation/share/arm_simulation/worlds
+[1.529s] creating /trainee/workspace/trainee_ws/install/arm_simulation/share/arm_simulation/resource
+[1.529s] symbolically linking /trainee/workspace/trainee_ws/build/arm_simulation/resource/robot_driver.urdf -> /trainee/workspace/trainee_ws/install/arm_simulation/share/arm_simulation/resource
+[1.561s] Invoked command in '/trainee/workspace/trainee_ws/build/arm_simulation' returned '0': PYTHONPATH=/trainee/workspace/trainee_ws/build/arm_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws/install/arm_simulation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /trainee/workspace/trainee_ws/build/arm_simulation/build --no-deps symlink_data

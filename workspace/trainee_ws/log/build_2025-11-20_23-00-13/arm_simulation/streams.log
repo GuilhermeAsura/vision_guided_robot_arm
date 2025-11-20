@@ -1,0 +1,17 @@
+[0.882s] Invoking command in '/trainee/workspace/trainee_ws/build/arm_simulation': PYTHONPATH=/trainee/workspace/trainee_ws/build/arm_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws/install/arm_simulation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /trainee/workspace/trainee_ws/build/arm_simulation/build --no-deps symlink_data
+[1.231s] running develop
+[1.455s] running egg_info
+[1.455s] writing arm_simulation.egg-info/PKG-INFO
+[1.455s] writing dependency_links to arm_simulation.egg-info/dependency_links.txt
+[1.456s] writing entry points to arm_simulation.egg-info/entry_points.txt
+[1.456s] writing requirements to arm_simulation.egg-info/requires.txt
+[1.456s] writing top-level names to arm_simulation.egg-info/top_level.txt
+[1.458s] reading manifest file 'arm_simulation.egg-info/SOURCES.txt'
+[1.467s] writing manifest file 'arm_simulation.egg-info/SOURCES.txt'
+[1.470s] running build_ext
+[1.470s] Creating /trainee/workspace/trainee_ws/install/arm_simulation/lib/python3.10/site-packages/arm-simulation.egg-link (link to .)
+[1.472s] Installing controller script to /trainee/workspace/trainee_ws/install/arm_simulation/lib/arm_simulation
+[1.472s] 
+[1.472s] Installed /trainee/workspace/trainee_ws/build/arm_simulation
+[1.473s] running symlink_data
+[1.506s] Invoked command in '/trainee/workspace/trainee_ws/build/arm_simulation' returned '0': PYTHONPATH=/trainee/workspace/trainee_ws/build/arm_simulation/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws/install/arm_simulation/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /trainee/workspace/trainee_ws/build/arm_simulation/build --no-deps symlink_data
