@@ -1,0 +1,11 @@
+# Arquivos de compilação do ROS2
+workspace/trainee_ws/build/
+workspace/trainee_ws/install/
+workspace/trainee_ws/log/
+
+# Instalador do Webots (arquivo grande)
+webots-R2025a-x86-64.tar.bz2
+
+# Arquivos de IDE
+.vscode/
+.idea/
