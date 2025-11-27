@@ -1,12 +1,1 @@
-<?xml version="1.0" ?>
-<robot name="Ur5e">
-    <webots>
-        <plugin type="webots_ros2_driver::Ros2IMU">
-            <enabled>true</enabled>
-            <topicName>/imu</topicName>
-            <alwaysOn>true</alwaysOn>
-        </plugin>
-        
-        <plugin type="webots_ros2_driver::WebotsRos2Driver" />
-    </webots>
-</robot>
+/trainee/workspace/trainee_ws/build/arm_simulation/resource/robot_driver.urdf

@@ -1,4 +1,0 @@
-[console_scripts]
-keyboard_listener = keyboard_check.keyboard_listener:main
-keyboard_publisher = keyboard_check.keyboard_publisher:main
-
