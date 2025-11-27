@@ -28,8 +28,8 @@ class WebotsSubscriber(Node):
                 10
         )
 
-        # JUNTas informações
-        self.joint_default_positions = [0.0, -1.57, 1.57, -1.57, -1.57, 0.0]  # POSIÇÕES INICIAIS DAS JUNTAS
+        #  informações de juntas
+        self.joint_default_positions = [0.0, -1.57, 1.57, -1.57, -1.57, 0.0, 0.0, 0.0]  # posiçõe iniciais das juntas: UR5e + end effector
 
         self.joints = [] # NOME DAS JUNTAS
         self.joint_names = [] # NOMES DAS JUNTAS

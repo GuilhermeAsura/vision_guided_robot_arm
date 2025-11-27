@@ -80,7 +80,8 @@ class KeyboardPublisher(Node):
                 '4': 104,
                 '5': 105,
                 '6': 106,
-
+                '7': 107, # garra
+                '8': 108, # garra
                 "R": 201,
                 "T": 202
             }

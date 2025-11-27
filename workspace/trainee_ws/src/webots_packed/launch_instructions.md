@@ -30,13 +30,16 @@ Abra um terminal no workspace (`/trainee/workspace/trainee_ws`) e execute:
 Bash
 
 ``` bash
-# 1. Garanta que o workspace está compilado
+# 1. adicione o xterm para ter acesso ao terminal extra
+sudo apt-get update && sudo apt-get install -y xterm
+
+# 2. Garanta que o workspace está compilado
 colcon build --symlink-install
 
-# 2. Carregue as configurações do ambiente
+# 3. Carregue as configurações do ambiente
 source install/setup.bash
 
-# 3. Inicie o sistema de controle
+# 4. Inicie o sistema de controle
 ros2 launch webots_packed robot_control.launch.py
 ```
 
