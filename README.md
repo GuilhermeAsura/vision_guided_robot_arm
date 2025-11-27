@@ -3,7 +3,9 @@
 
 Este repositório contém o ambiente de desenvolvimento containerizado (Docker) para o projeto de simulação de braço robótico.
 
-[cite_start]O ambiente é baseado em **ROS2 Humble** e inclui o simulador **Webots (R2025a)**, **OpenCV**, e **NumPy**, todos pré-configurados para funcionar em conjunto[cite: 10, 11].
+![Keyboard controll with a gripper-armed robot on Webots](img/logo_readme.png)
+
+O ambiente é baseado em **ROS2 Humble** e inclui o simulador **Webots (R2025a)**, **OpenCV**, e **NumPy**, todos pré-configurados para funcionar em conjunto[cite: 10, 11].
 
 ## 📋 Pré-requisitos (Dependências do Host)
 
