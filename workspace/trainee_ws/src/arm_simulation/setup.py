@@ -5,7 +5,7 @@ from glob import glob
 package_name = 'arm_simulation'
 
 setup(
-    name=package_name,
+    name='arm_simulation',
     version='0.0.0',
     packages=[package_name],
     data_files=[
@@ -29,7 +29,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'controller = arm_simulation.controller:main',
+            # 'controller = arm_simulation.controller:main',
+            'hybrid_controller = arm_simulation.hybrid_controller:main',
         ],
     },
 )

@@ -1,1 +1,0 @@
-/trainee/workspace/trainee_ws/src/arm_simulation/launch/arm_launch.py
