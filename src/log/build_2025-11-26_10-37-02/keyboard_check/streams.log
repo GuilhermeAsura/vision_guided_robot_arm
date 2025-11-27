@@ -1,0 +1,24 @@
+[1.686s] Invoking command in '/trainee/workspace/trainee_ws_pinguin/src/keyboard_check': PYTHONPATH=/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/keyboard_check build --build-base /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build install --record /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/install.log --single-version-externally-managed
+[2.190s] running egg_info
+[2.191s] writing ../build/keyboard_check/keyboard_check.egg-info/PKG-INFO
+[2.192s] writing dependency_links to ../build/keyboard_check/keyboard_check.egg-info/dependency_links.txt
+[2.192s] writing entry points to ../build/keyboard_check/keyboard_check.egg-info/entry_points.txt
+[2.192s] writing requirements to ../build/keyboard_check/keyboard_check.egg-info/requires.txt
+[2.192s] writing top-level names to ../build/keyboard_check/keyboard_check.egg-info/top_level.txt
+[2.196s] reading manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'
+[2.198s] writing manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'
+[2.198s] running build
+[2.198s] running build_py
+[2.200s] copying keyboard_check/keyboard_publisher.py -> /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check
+[2.200s] running install
+[2.200s] running install_lib
+[2.201s] copying /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check/keyboard_publisher.py -> /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check
+[2.202s] byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check/keyboard_publisher.py to keyboard_publisher.cpython-310.pyc
+[2.204s] running install_egg_info
+[2.207s] removing '/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check-0.0.0-py3.10.egg-info' (and everything under it)
+[2.207s] Copying ../build/keyboard_check/keyboard_check.egg-info to /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check-0.0.0-py3.10.egg-info
+[2.208s] running install_scripts
+[2.249s] Installing keyboard_listener script to /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/keyboard_check
+[2.250s] Installing keyboard_publisher script to /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/keyboard_check
+[2.250s] writing list of installed files to '/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/install.log'
+[2.300s] Invoked command in '/trainee/workspace/trainee_ws_pinguin/src/keyboard_check' returned '0': PYTHONPATH=/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/keyboard_check build --build-base /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build install --record /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/install.log --single-version-externally-managed

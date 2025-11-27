@@ -1,0 +1,3 @@
+[console_scripts]
+webots_listener = webots_packed.webots_listener:main
+

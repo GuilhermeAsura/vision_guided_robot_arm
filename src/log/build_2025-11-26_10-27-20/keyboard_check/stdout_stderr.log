@@ -1,0 +1,32 @@
+running egg_info
+creating ../build/keyboard_check/keyboard_check.egg-info
+writing ../build/keyboard_check/keyboard_check.egg-info/PKG-INFO
+writing dependency_links to ../build/keyboard_check/keyboard_check.egg-info/dependency_links.txt
+writing entry points to ../build/keyboard_check/keyboard_check.egg-info/entry_points.txt
+writing requirements to ../build/keyboard_check/keyboard_check.egg-info/requires.txt
+writing top-level names to ../build/keyboard_check/keyboard_check.egg-info/top_level.txt
+writing manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'
+reading manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'
+writing manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build
+creating /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib
+creating /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check
+copying keyboard_check/keyboard_listener.py -> /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check
+copying keyboard_check/__init__.py -> /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check
+copying keyboard_check/keyboard_publisher.py -> /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check
+running install
+running install_lib
+creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check
+copying /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check/keyboard_listener.py -> /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check
+copying /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check/__init__.py -> /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check
+copying /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check/keyboard_publisher.py -> /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check
+byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check/keyboard_listener.py to keyboard_listener.cpython-310.pyc
+byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check/__init__.py to __init__.cpython-310.pyc
+byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check/keyboard_publisher.py to keyboard_publisher.cpython-310.pyc
+running install_data
+creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/ament_index
+creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/ament_index/resource_index
+error: can't copy 'resource/keyboard_check': doesn't exist or not a regular file
+creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/ament_index/resource_index/packages

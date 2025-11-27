@@ -1,0 +1,11 @@
+ros2 run keyboard_check keyboard_publisher
+ros2 run keyboard_check keyboard_listener
+ros2 run webots_packed webots_listener
+
+cd /trainee/workspace/trainee_ws_pinguin
+sudo docker exec -it trainee_container bash
+
+
+exec webots ->
+terminal 1: webots
+terminal 2: ros2 run webots_packed webots_listener

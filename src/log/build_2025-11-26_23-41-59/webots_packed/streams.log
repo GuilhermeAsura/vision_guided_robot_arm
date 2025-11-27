@@ -1,0 +1,20 @@
+[2.099s] Invoking command in '/trainee/workspace/trainee_ws_pinguin/src/webots_packed': PYTHONPATH=/trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/webots_packed build --build-base /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build install --record /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/install.log --single-version-externally-managed
+[2.528s] running egg_info
+[2.529s] writing ../build/webots_packed/webots_packed.egg-info/PKG-INFO
+[2.529s] writing dependency_links to ../build/webots_packed/webots_packed.egg-info/dependency_links.txt
+[2.529s] writing entry points to ../build/webots_packed/webots_packed.egg-info/entry_points.txt
+[2.529s] writing requirements to ../build/webots_packed/webots_packed.egg-info/requires.txt
+[2.530s] writing top-level names to ../build/webots_packed/webots_packed.egg-info/top_level.txt
+[2.533s] reading manifest file '../build/webots_packed/webots_packed.egg-info/SOURCES.txt'
+[2.536s] writing manifest file '../build/webots_packed/webots_packed.egg-info/SOURCES.txt'
+[2.536s] running build
+[2.536s] running build_py
+[2.536s] running install
+[2.537s] running install_lib
+[2.538s] running install_egg_info
+[2.541s] removing '/trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages/webots_packed-0.0.0-py3.10.egg-info' (and everything under it)
+[2.546s] Copying ../build/webots_packed/webots_packed.egg-info to /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages/webots_packed-0.0.0-py3.10.egg-info
+[2.547s] running install_scripts
+[2.579s] Installing webots_listener script to /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/webots_packed
+[2.580s] writing list of installed files to '/trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/install.log'
+[2.615s] Invoked command in '/trainee/workspace/trainee_ws_pinguin/src/webots_packed' returned '0': PYTHONPATH=/trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/webots_packed build --build-base /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build install --record /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/install.log --single-version-externally-managed

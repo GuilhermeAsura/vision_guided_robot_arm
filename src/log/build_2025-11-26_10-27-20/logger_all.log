@@ -1,0 +1,123 @@
+[0.416s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.416s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=6, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7ccf69b6ca90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7ccf69b6c400>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7ccf69b6c400>>, mixin_verb=('build',))
+[0.941s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.941s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.941s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.941s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.941s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.941s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.941s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/trainee/workspace/trainee_ws_pinguin/src'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.942s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.969s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.969s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.969s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.969s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.969s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.970s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.970s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.970s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.970s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.970s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.970s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.970s] Level 1:colcon.colcon_core.package_identification:_identify(keyboard_check) by extensions ['ignore', 'ignore_ament_install']
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(keyboard_check) by extension 'ignore'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(keyboard_check) by extension 'ignore_ament_install'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(keyboard_check) by extensions ['colcon_pkg']
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(keyboard_check) by extension 'colcon_pkg'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(keyboard_check) by extensions ['colcon_meta']
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(keyboard_check) by extension 'colcon_meta'
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(keyboard_check) by extensions ['ros']
+[0.971s] Level 1:colcon.colcon_core.package_identification:_identify(keyboard_check) by extension 'ros'
+[0.977s] DEBUG:colcon.colcon_core.package_identification:Package 'keyboard_check' with type 'ros.ament_python' and name 'keyboard_check'
+[0.977s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(webots_packed) by extensions ['ignore', 'ignore_ament_install']
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(webots_packed) by extension 'ignore'
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(webots_packed) by extension 'ignore_ament_install'
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(webots_packed) by extensions ['colcon_pkg']
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(webots_packed) by extension 'colcon_pkg'
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(webots_packed) by extensions ['colcon_meta']
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(webots_packed) by extension 'colcon_meta'
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(webots_packed) by extensions ['ros']
+[0.978s] Level 1:colcon.colcon_core.package_identification:_identify(webots_packed) by extension 'ros'
+[0.980s] DEBUG:colcon.colcon_core.package_identification:Package 'webots_packed' with type 'ros.ament_python' and name 'webots_packed'
+[0.980s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.980s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.980s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.980s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.980s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.040s] Level 5:colcon.colcon_core.verb:set package 'keyboard_check' build argument 'cmake_args' from command line to 'None'
+[1.040s] Level 5:colcon.colcon_core.verb:set package 'keyboard_check' build argument 'cmake_target' from command line to 'None'
+[1.040s] Level 5:colcon.colcon_core.verb:set package 'keyboard_check' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.040s] Level 5:colcon.colcon_core.verb:set package 'keyboard_check' build argument 'cmake_clean_cache' from command line to 'False'
+[1.040s] Level 5:colcon.colcon_core.verb:set package 'keyboard_check' build argument 'cmake_clean_first' from command line to 'False'
+[1.040s] Level 5:colcon.colcon_core.verb:set package 'keyboard_check' build argument 'cmake_force_configure' from command line to 'False'
+[1.040s] Level 5:colcon.colcon_core.verb:set package 'keyboard_check' build argument 'ament_cmake_args' from command line to 'None'
+[1.040s] Level 5:colcon.colcon_core.verb:set package 'keyboard_check' build argument 'catkin_cmake_args' from command line to 'None'
+[1.040s] Level 5:colcon.colcon_core.verb:set package 'keyboard_check' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.040s] DEBUG:colcon.colcon_core.verb:Building package 'keyboard_check' with the following arguments: {'ament_cmake_args': None, 'build_base': '/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check', 'merge_install': False, 'path': '/trainee/workspace/trainee_ws_pinguin/src/keyboard_check', 'symlink_install': False, 'test_result_base': None}
+[1.041s] Level 5:colcon.colcon_core.verb:set package 'webots_packed' build argument 'cmake_args' from command line to 'None'
+[1.041s] Level 5:colcon.colcon_core.verb:set package 'webots_packed' build argument 'cmake_target' from command line to 'None'
+[1.041s] Level 5:colcon.colcon_core.verb:set package 'webots_packed' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.041s] Level 5:colcon.colcon_core.verb:set package 'webots_packed' build argument 'cmake_clean_cache' from command line to 'False'
+[1.041s] Level 5:colcon.colcon_core.verb:set package 'webots_packed' build argument 'cmake_clean_first' from command line to 'False'
+[1.041s] Level 5:colcon.colcon_core.verb:set package 'webots_packed' build argument 'cmake_force_configure' from command line to 'False'
+[1.041s] Level 5:colcon.colcon_core.verb:set package 'webots_packed' build argument 'ament_cmake_args' from command line to 'None'
+[1.041s] Level 5:colcon.colcon_core.verb:set package 'webots_packed' build argument 'catkin_cmake_args' from command line to 'None'
+[1.041s] Level 5:colcon.colcon_core.verb:set package 'webots_packed' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.041s] DEBUG:colcon.colcon_core.verb:Building package 'webots_packed' with the following arguments: {'ament_cmake_args': None, 'build_base': '/trainee/workspace/trainee_ws_pinguin/src/build/webots_packed', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/trainee/workspace/trainee_ws_pinguin/src/install/webots_packed', 'merge_install': False, 'path': '/trainee/workspace/trainee_ws_pinguin/src/webots_packed', 'symlink_install': False, 'test_result_base': None}
+[1.041s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.044s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.045s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/trainee/workspace/trainee_ws_pinguin/src/keyboard_check' with build type 'ament_python'
+[1.045s] Level 1:colcon.colcon_core.shell:create_environment_hook('keyboard_check', 'ament_prefix_path')
+[1.060s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/keyboard_check/hook/ament_prefix_path.ps1'
+[1.063s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/keyboard_check/hook/ament_prefix_path.dsv'
+[1.064s] INFO:colcon.colcon_core.shell:Creating environment hook '/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/keyboard_check/hook/ament_prefix_path.sh'
+[1.065s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.065s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.091s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/trainee/workspace/trainee_ws_pinguin/src/webots_packed' with build type 'ament_python'
+[1.091s] Level 1:colcon.colcon_core.shell:create_environment_hook('webots_packed', 'ament_prefix_path')
+[1.092s] INFO:colcon.colcon_core.shell:Creating environment hook '/trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/share/webots_packed/hook/ament_prefix_path.ps1'
+[1.093s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/share/webots_packed/hook/ament_prefix_path.dsv'
+[1.093s] INFO:colcon.colcon_core.shell:Creating environment hook '/trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/share/webots_packed/hook/ament_prefix_path.sh'
+[1.094s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.094s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.535s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/trainee/workspace/trainee_ws_pinguin/src/keyboard_check'
+[1.535s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.535s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.978s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/trainee/workspace/trainee_ws_pinguin/src/webots_packed'
+[1.978s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.978s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.859s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/trainee/workspace/trainee_ws_pinguin/src/webots_packed': PYTHONPATH=/trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/webots_packed build --build-base /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build install --record /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/install.log --single-version-externally-managed install_data
+[2.868s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/trainee/workspace/trainee_ws_pinguin/src/keyboard_check': PYTHONPATH=/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/keyboard_check build --build-base /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build install --record /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/install.log --single-version-externally-managed install_data
+[3.324s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/trainee/workspace/trainee_ws_pinguin/src/keyboard_check' returned '1': PYTHONPATH=/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/keyboard_check build --build-base /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build install --record /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/install.log --single-version-externally-managed install_data
+[3.365s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.365s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.365s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[3.365s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.407s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[3.407s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.407s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.407s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.417s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[3.417s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.418s] INFO:colcon.colcon_core.shell:Creating prefix script '/trainee/workspace/trainee_ws_pinguin/src/install/local_setup.ps1'
+[3.420s] INFO:colcon.colcon_core.shell:Creating prefix util module '/trainee/workspace/trainee_ws_pinguin/src/install/_local_setup_util_ps1.py'
+[3.423s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/trainee/workspace/trainee_ws_pinguin/src/install/setup.ps1'
+[3.425s] INFO:colcon.colcon_core.shell:Creating prefix script '/trainee/workspace/trainee_ws_pinguin/src/install/local_setup.sh'
+[3.427s] INFO:colcon.colcon_core.shell:Creating prefix util module '/trainee/workspace/trainee_ws_pinguin/src/install/_local_setup_util_sh.py'
+[3.428s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/trainee/workspace/trainee_ws_pinguin/src/install/setup.sh'
+[3.430s] INFO:colcon.colcon_core.shell:Creating prefix script '/trainee/workspace/trainee_ws_pinguin/src/install/local_setup.bash'
+[3.432s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/trainee/workspace/trainee_ws_pinguin/src/install/setup.bash'
+[3.434s] INFO:colcon.colcon_core.shell:Creating prefix script '/trainee/workspace/trainee_ws_pinguin/src/install/local_setup.zsh'
+[3.436s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/trainee/workspace/trainee_ws_pinguin/src/install/setup.zsh'
