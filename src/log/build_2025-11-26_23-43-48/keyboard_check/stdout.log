@@ -1,0 +1,19 @@
+running egg_info
+writing ../build/keyboard_check/keyboard_check.egg-info/PKG-INFO
+writing dependency_links to ../build/keyboard_check/keyboard_check.egg-info/dependency_links.txt
+writing entry points to ../build/keyboard_check/keyboard_check.egg-info/entry_points.txt
+writing requirements to ../build/keyboard_check/keyboard_check.egg-info/requires.txt
+writing top-level names to ../build/keyboard_check/keyboard_check.egg-info/top_level.txt
+reading manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'
+writing manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_egg_info
+removing '/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/keyboard_check/keyboard_check.egg-info to /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check-0.0.0-py3.10.egg-info
+running install_scripts
+Installing keyboard_listener script to /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/keyboard_check
+Installing keyboard_publisher script to /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/keyboard_check
+writing list of installed files to '/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/install.log'

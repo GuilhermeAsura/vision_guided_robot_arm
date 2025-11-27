@@ -1,0 +1,34 @@
+[1.823s] Invoking command in '/trainee/workspace/trainee_ws_pinguin/src/keyboard_check': PYTHONPATH=/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/keyboard_check build --build-base /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build install --record /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/install.log --single-version-externally-managed install_data
+[2.238s] running egg_info
+[2.238s] creating ../build/keyboard_check/keyboard_check.egg-info
+[2.239s] writing ../build/keyboard_check/keyboard_check.egg-info/PKG-INFO
+[2.239s] writing dependency_links to ../build/keyboard_check/keyboard_check.egg-info/dependency_links.txt
+[2.239s] writing entry points to ../build/keyboard_check/keyboard_check.egg-info/entry_points.txt
+[2.240s] writing requirements to ../build/keyboard_check/keyboard_check.egg-info/requires.txt
+[2.240s] writing top-level names to ../build/keyboard_check/keyboard_check.egg-info/top_level.txt
+[2.240s] writing manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'
+[2.242s] reading manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'
+[2.244s] writing manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'
+[2.244s] running build
+[2.244s] running build_py
+[2.244s] creating /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build
+[2.245s] creating /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib
+[2.245s] creating /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check
+[2.245s] copying keyboard_check/keyboard_listener.py -> /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check
+[2.245s] copying keyboard_check/__init__.py -> /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check
+[2.245s] copying keyboard_check/keyboard_publisher.py -> /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check
+[2.245s] running install
+[2.246s] running install_lib
+[2.247s] creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check
+[2.249s] copying /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check/keyboard_listener.py -> /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check
+[2.249s] copying /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check/__init__.py -> /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check
+[2.249s] copying /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check/keyboard_publisher.py -> /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check
+[2.249s] byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check/keyboard_listener.py to keyboard_listener.cpython-310.pyc
+[2.249s] byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check/__init__.py to __init__.cpython-310.pyc
+[2.250s] byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check/keyboard_publisher.py to keyboard_publisher.cpython-310.pyc
+[2.250s] running install_data
+[2.250s] creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/ament_index
+[2.250s] creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/ament_index/resource_index
+[2.251s] error: can't copy 'resource/keyboard_check': doesn't exist or not a regular file
+[2.251s] creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/ament_index/resource_index/packages
+[2.279s] Invoked command in '/trainee/workspace/trainee_ws_pinguin/src/keyboard_check' returned '1': PYTHONPATH=/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/keyboard_check build --build-base /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build install --record /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/install.log --single-version-externally-managed install_data

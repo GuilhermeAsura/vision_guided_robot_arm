@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../build/webots_packed/webots_packed.egg-info/PKG-INFO
+../build/webots_packed/webots_packed.egg-info/SOURCES.txt
+../build/webots_packed/webots_packed.egg-info/dependency_links.txt
+../build/webots_packed/webots_packed.egg-info/entry_points.txt
+../build/webots_packed/webots_packed.egg-info/requires.txt
+../build/webots_packed/webots_packed.egg-info/top_level.txt
+../build/webots_packed/webots_packed.egg-info/zip-safe
+resource/webots_packed
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+webots_packed/__init__.py
+webots_packed/webots_listener.py

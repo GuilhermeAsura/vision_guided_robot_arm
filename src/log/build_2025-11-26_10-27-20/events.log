@@ -1,0 +1,101 @@
+[0.000000] (-) TimerEvent: {}
+[0.002902] (keyboard_check) JobQueued: {'identifier': 'keyboard_check', 'dependencies': OrderedDict()}
+[0.002984] (webots_packed) JobQueued: {'identifier': 'webots_packed', 'dependencies': OrderedDict()}
+[0.003021] (keyboard_check) JobStarted: {'identifier': 'keyboard_check'}
+[0.048415] (webots_packed) JobStarted: {'identifier': 'webots_packed'}
+[0.100487] (-) TimerEvent: {}
+[0.201404] (-) TimerEvent: {}
+[0.303467] (-) TimerEvent: {}
+[0.406792] (-) TimerEvent: {}
+[0.508180] (-) TimerEvent: {}
+[0.610753] (-) TimerEvent: {}
+[0.711500] (-) TimerEvent: {}
+[0.812145] (-) TimerEvent: {}
+[0.912772] (-) TimerEvent: {}
+[1.013408] (-) TimerEvent: {}
+[1.114130] (-) TimerEvent: {}
+[1.214720] (-) TimerEvent: {}
+[1.315129] (-) TimerEvent: {}
+[1.415862] (-) TimerEvent: {}
+[1.516247] (-) TimerEvent: {}
+[1.616677] (-) TimerEvent: {}
+[1.717113] (-) TimerEvent: {}
+[1.815774] (webots_packed) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/webots_packed', 'build', '--build-base', '/trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build', 'install', '--record', '/trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/trainee/workspace/trainee_ws_pinguin/src/webots_packed', 'env': {'LANGUAGE': 'en_US:en', 'HOSTNAME': 'pinguin-VirtualBox', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ros', 'OLDPWD': '/trainee/workspace/trainee_ws_pinguin', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/trainee/workspace/trainee_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'graphics,compute,utility', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/webots:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/trainee/workspace/trainee_ws/install/arm_simulation:/opt/ros/humble', 'WEBOTS_HOME': '/usr/local/webots', 'PWD': '/trainee/workspace/trainee_ws_pinguin/src/build/webots_packed', 'LC_ALL': 'en_US.UTF-8', 'PYTHONPATH': '/trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages:/trainee/workspace/trainee_ws/install/arm_simulation/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[1.818477] (-) TimerEvent: {}
+[1.825280] (keyboard_check) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/keyboard_check', 'build', '--build-base', '/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build', 'install', '--record', '/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/trainee/workspace/trainee_ws_pinguin/src/keyboard_check', 'env': {'LANGUAGE': 'en_US:en', 'HOSTNAME': 'pinguin-VirtualBox', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ros', 'OLDPWD': '/trainee/workspace/trainee_ws_pinguin', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/trainee/workspace/trainee_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'graphics,compute,utility', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/webots:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/trainee/workspace/trainee_ws/install/arm_simulation:/opt/ros/humble', 'WEBOTS_HOME': '/usr/local/webots', 'PWD': '/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check', 'LC_ALL': 'en_US.UTF-8', 'PYTHONPATH': '/trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages:/trainee/workspace/trainee_ws/install/arm_simulation/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[1.918719] (-) TimerEvent: {}
+[2.019193] (-) TimerEvent: {}
+[2.119924] (-) TimerEvent: {}
+[2.222176] (-) TimerEvent: {}
+[2.231015] (webots_packed) StdoutLine: {'line': b'running egg_info\n'}
+[2.232048] (webots_packed) StdoutLine: {'line': b'creating ../build/webots_packed/webots_packed.egg-info\n'}
+[2.232614] (webots_packed) StdoutLine: {'line': b'writing ../build/webots_packed/webots_packed.egg-info/PKG-INFO\n'}
+[2.233019] (webots_packed) StdoutLine: {'line': b'writing dependency_links to ../build/webots_packed/webots_packed.egg-info/dependency_links.txt\n'}
+[2.233291] (webots_packed) StdoutLine: {'line': b'writing entry points to ../build/webots_packed/webots_packed.egg-info/entry_points.txt\n'}
+[2.233460] (webots_packed) StdoutLine: {'line': b'writing requirements to ../build/webots_packed/webots_packed.egg-info/requires.txt\n'}
+[2.233831] (webots_packed) StdoutLine: {'line': b'writing top-level names to ../build/webots_packed/webots_packed.egg-info/top_level.txt\n'}
+[2.235742] (webots_packed) StdoutLine: {'line': b"writing manifest file '../build/webots_packed/webots_packed.egg-info/SOURCES.txt'\n"}
+[2.236616] (webots_packed) StdoutLine: {'line': b"reading manifest file '../build/webots_packed/webots_packed.egg-info/SOURCES.txt'\n"}
+[2.238325] (webots_packed) StdoutLine: {'line': b"writing manifest file '../build/webots_packed/webots_packed.egg-info/SOURCES.txt'\n"}
+[2.238572] (webots_packed) StdoutLine: {'line': b'running build\n'}
+[2.238824] (webots_packed) StdoutLine: {'line': b'running build_py\n'}
+[2.239104] (webots_packed) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build\n'}
+[2.239270] (webots_packed) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build/lib\n'}
+[2.239426] (webots_packed) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build/lib/webots_packed\n'}
+[2.239644] (webots_packed) StdoutLine: {'line': b'copying webots_packed/webots_listener.py -> /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build/lib/webots_packed\n'}
+[2.239861] (webots_packed) StdoutLine: {'line': b'copying webots_packed/__init__.py -> /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build/lib/webots_packed\n'}
+[2.240234] (webots_packed) StdoutLine: {'line': b'running install\n'}
+[2.240813] (keyboard_check) StdoutLine: {'line': b'running egg_info\n'}
+[2.240973] (webots_packed) StdoutLine: {'line': b'running install_lib\n'}
+[2.241382] (keyboard_check) StdoutLine: {'line': b'creating ../build/keyboard_check/keyboard_check.egg-info\n'}
+[2.241739] (keyboard_check) StdoutLine: {'line': b'writing ../build/keyboard_check/keyboard_check.egg-info/PKG-INFO\n'}
+[2.242104] (keyboard_check) StdoutLine: {'line': b'writing dependency_links to ../build/keyboard_check/keyboard_check.egg-info/dependency_links.txt\n'}
+[2.242353] (keyboard_check) StdoutLine: {'line': b'writing entry points to ../build/keyboard_check/keyboard_check.egg-info/entry_points.txt\n'}
+[2.242514] (keyboard_check) StdoutLine: {'line': b'writing requirements to ../build/keyboard_check/keyboard_check.egg-info/requires.txt\n'}
+[2.242796] (keyboard_check) StdoutLine: {'line': b'writing top-level names to ../build/keyboard_check/keyboard_check.egg-info/top_level.txt\n'}
+[2.242952] (keyboard_check) StdoutLine: {'line': b"writing manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'\n"}
+[2.243185] (webots_packed) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages/webots_packed\n'}
+[2.243342] (webots_packed) StdoutLine: {'line': b'copying /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build/lib/webots_packed/webots_listener.py -> /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages/webots_packed\n'}
+[2.243574] (webots_packed) StdoutLine: {'line': b'copying /trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/build/lib/webots_packed/__init__.py -> /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages/webots_packed\n'}
+[2.244389] (webots_packed) StdoutLine: {'line': b'byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages/webots_packed/webots_listener.py to webots_listener.cpython-310.pyc\n'}
+[2.245208] (webots_packed) StdoutLine: {'line': b'byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages/webots_packed/__init__.py to __init__.cpython-310.pyc\n'}
+[2.245334] (keyboard_check) StdoutLine: {'line': b"reading manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'\n"}
+[2.245541] (webots_packed) StdoutLine: {'line': b'running install_data\n'}
+[2.245757] (webots_packed) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/share/ament_index\n'}
+[2.245965] (webots_packed) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/share/ament_index/resource_index\n'}
+[2.246120] (webots_packed) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/share/ament_index/resource_index/packages\n'}
+[2.246336] (webots_packed) StdoutLine: {'line': b'copying resource/webots_packed -> /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/share/ament_index/resource_index/packages\n'}
+[2.246488] (webots_packed) StdoutLine: {'line': b'copying package.xml -> /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/share/webots_packed\n'}
+[2.246811] (keyboard_check) StdoutLine: {'line': b"writing manifest file '../build/keyboard_check/keyboard_check.egg-info/SOURCES.txt'\n"}
+[2.246950] (keyboard_check) StdoutLine: {'line': b'running build\n'}
+[2.247049] (webots_packed) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.247159] (keyboard_check) StdoutLine: {'line': b'running build_py\n'}
+[2.247384] (keyboard_check) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build\n'}
+[2.247521] (keyboard_check) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib\n'}
+[2.247643] (keyboard_check) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check\n'}
+[2.247820] (keyboard_check) StdoutLine: {'line': b'copying keyboard_check/keyboard_listener.py -> /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check\n'}
+[2.247918] (keyboard_check) StdoutLine: {'line': b'copying keyboard_check/__init__.py -> /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check\n'}
+[2.248008] (keyboard_check) StdoutLine: {'line': b'copying keyboard_check/keyboard_publisher.py -> /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check\n'}
+[2.248328] (keyboard_check) StdoutLine: {'line': b'running install\n'}
+[2.248556] (keyboard_check) StdoutLine: {'line': b'running install_lib\n'}
+[2.250111] (keyboard_check) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check\n'}
+[2.251637] (keyboard_check) StdoutLine: {'line': b'copying /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check/keyboard_listener.py -> /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check\n'}
+[2.251806] (keyboard_check) StdoutLine: {'line': b'copying /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check/__init__.py -> /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check\n'}
+[2.251930] (keyboard_check) StdoutLine: {'line': b'copying /trainee/workspace/trainee_ws_pinguin/src/build/keyboard_check/build/lib/keyboard_check/keyboard_publisher.py -> /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check\n'}
+[2.252051] (keyboard_check) StdoutLine: {'line': b'byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check/keyboard_listener.py to keyboard_listener.cpython-310.pyc\n'}
+[2.252165] (webots_packed) StdoutLine: {'line': b'Copying ../build/webots_packed/webots_packed.egg-info to /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/python3.10/site-packages/webots_packed-0.0.0-py3.10.egg-info\n'}
+[2.252424] (keyboard_check) StdoutLine: {'line': b'byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check/__init__.py to __init__.cpython-310.pyc\n'}
+[2.252518] (keyboard_check) StdoutLine: {'line': b'byte-compiling /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/lib/python3.10/site-packages/keyboard_check/keyboard_publisher.py to keyboard_publisher.cpython-310.pyc\n'}
+[2.252588] (webots_packed) StdoutLine: {'line': b'running install_scripts\n'}
+[2.252871] (keyboard_check) StdoutLine: {'line': b'running install_data\n'}
+[2.253010] (keyboard_check) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/ament_index\n'}
+[2.253087] (keyboard_check) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/ament_index/resource_index\n'}
+[2.253470] (keyboard_check) StderrLine: {'line': b"error: can't copy 'resource/keyboard_check': doesn't exist or not a regular file\n"}
+[2.253613] (keyboard_check) StdoutLine: {'line': b'creating /trainee/workspace/trainee_ws_pinguin/src/install/keyboard_check/share/ament_index/resource_index/packages\n'}
+[2.281390] (keyboard_check) CommandEnded: {'returncode': 1}
+[2.281705] (keyboard_check) JobEnded: {'identifier': 'keyboard_check', 'rc': 1}
+[2.289502] (webots_packed) StdoutLine: {'line': b'Installing webots_listener script to /trainee/workspace/trainee_ws_pinguin/src/install/webots_packed/lib/webots_packed\n'}
+[2.290155] (webots_packed) StdoutLine: {'line': b"writing list of installed files to '/trainee/workspace/trainee_ws_pinguin/src/build/webots_packed/install.log'\n"}
+[2.321596] (webots_packed) JobEnded: {'identifier': 'webots_packed', 'rc': 'SIGINT'}
+[2.322529] (-) TimerEvent: {}
+[2.323103] (-) EventReactorShutdown: {}
