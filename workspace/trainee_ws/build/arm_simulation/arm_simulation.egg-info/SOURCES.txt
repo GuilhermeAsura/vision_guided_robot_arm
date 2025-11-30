@@ -14,5 +14,6 @@ launch/arm_launch.py
 launch/hybrid_launch.py
 resource/arm_simulation
 resource/robot_driver.urdf
+worlds/armed_gripper_cam.wbt
 worlds/basic_arm.wbt
 worlds/basic_arm_gripper.wbt
