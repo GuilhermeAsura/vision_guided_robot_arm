@@ -9,29 +9,46 @@ import numpy as np
 class ObjectDetectorNode(Node):
     def __init__(self):
         super().__init__('vision_processor_node')
+        """
+        O ROS transmite imagens como arrays de bytes serializados (sensor_msgs/Image). 
+        O OpenCV espera matrizes NumPy. O CvBridge é o Middleware padrão que faz essa tradução.
+        """
         self.bridge = CvBridge()
         self.image_sub = self.create_subscription(
             Image, '/UR5e/camera_sensor/image_color', self.image_callback, 10)
+        """
+        Optei por publicar em geometry_msgs/msg/Point. Isso facilita a integração com o nó de Controle. 
+        O nó de controle apenas assina /vision/object_coordinates e recebe $x, y$ limpos, sem precisar saber 
+        o que é uma câmera ou processar imagens, mantendo o princípio de Responsabilidade Única (SOLID).
+        """
         self.coord_pub = self.create_publisher(Point, '/vision/object_coordinates', 10)
         self.get_logger().info('Nó de Visão Computacional Iniciado.')
 
     def image_callback(self, msg):
+        """
+        Pipeline de Processamento de Imagem
+        """
         try:
+            # A. Conversão ROS -> OpenCV
             cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
         except CvBridgeError as e:
             self.get_logger().error(f'Erro CvBridge: {e}')
             return
 
+        # B. Processamento (Detecção de Círculo Vermelho)
         coordinates = self.process_image(cv_image)
 
+        # C. Publicação
         if coordinates:
-            cx, cy = coordinates
+            cx, cy = coordinates # -> z=0 para 2D
             point_msg = Point()
             point_msg.x = float(cx)
             point_msg.y = float(cy)
             point_msg.z = 0.0
             self.coord_pub.publish(point_msg)
-            
+            # Log para debug (remover em produção para performance)
+            # self.get_logger().info(f'Objeto detectado em: X={cx}, Y={cy}')
+
             # Desenha círculo verde para debug
             cv2.circle(cv_image, (cx, cy), 5, (0, 255, 0), -1)
 
