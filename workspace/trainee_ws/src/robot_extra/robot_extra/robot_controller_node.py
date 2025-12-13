@@ -120,11 +120,11 @@ class WebotsSubscriber(Node):
                 
                 # Move Elbow (Joint 2)
                 offset = ez * kp_zoom * 0.1
-                self.joint_positions[2] += offset 
+                self.joint_positions[2] -= offset 
                 
                 # Compensate Wrist 1 (Joint 3) to keep camera straight
                 # If camera dips down, reduce this factor (e.g. 0.8 * offset)
-                self.joint_positions[3] -= (offset * 1.0)
+                self.joint_positions[3] += (offset * 0.5)
                 
                 updated = True
 
