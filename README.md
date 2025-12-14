@@ -7,37 +7,6 @@ Este repositório contém o ambiente de desenvolvimento containerizado **(Docker
 
 O ambiente é baseado em **ROS2 Humble** e inclui o simulador **Webots (R2025a)**, **OpenCV**, e **NumPy**, todos pré-configurados para funcionar em conjunto[cite: 10, 11].
 
----
-## ⚙️ Funcionamento
-Adotamos uma arquitetura de Visual Servoing Baseado em Imagem **(IBVS - Image-Based Visual Servoing)** com uma abordagem heurística direta.<br>
-(_"Servoing"_ refere-se à técnica de controle de movimento de um robô usando feedback visual extraído de uma câmera.)
-
-**1. Eliminamos a Cinemática Inversa (IK)**: 
-Na robótica clássica, o fluxo seria:
-Detectar objeto em pixels `(u, v)`; converter pixels para coordenadas 3D no mundo `(x, y, z)` usando a matriz intrínseca da câmera e profundidade; calcular a Cinemática Inversa para descobrir quais ângulos de junta `(θ1, θ2, ...)` levam o efetuador até `(x, y, z)`; mover para esses ângulos.<br>
-<br>
-Nós sabemos que se o objeto está à esquerda na imagem, precisamos girar a Base para a esquerda. Sabemos que se o objeto está em cima na imagem, precisamos levantar o Ombro. Assim, mapeamos o **Erro em Pixels** diretamente para **Velocidade da Junta**, sem passar pela matemática complexa de coordenadas cartesianas 3D.
-<br>
-
-**2. Utilizamos um Controlador Proporcional (P-Controller)**:
-<br>
-A lógica matemática se resume a: `Velocidade = Ganho x Erro`
-- **Erro (e)**: Ele calcula a diferença entre onde o objeto está `(x, y)` e o centro da imagem (320, 240).
-- **Lei de Controle**: _`Vjunta = Kp x e`_ 
-Se o objeto está à direita (erro positivo), movemos a junta positivamente.
-Se o erro é zero (centralizado), a velocidade é zero.
-- **Loop Principal**: A cada passo da simulação (step), lemos os bytes da câmera e empacotamos numa mensagem ROS padrão (bgra8 é o padrão do Webots, o cv_bridge no outro nó fará a conversão automática).
-
-Dessa forma o **nó de controle** tem duas responsabilidades:
-<br>
-**Output (Atuadores)**: Receber comandos e mover juntas (já implementado).<br>
-**Input (Sensores)**: Ler a câmera do Webots e publicar a imagem bruta para o ROS.
-<br>
-
-Não precisamos de integrais ou derivadas porque o loop de controle roda muito rápido (32ms a 60ms). O robô faz correções minúsculas e contínuas. Se ele não chegar lá na primeira tentativa, o loop roda de novo e ele corrige mais um pouco. Isso remove a necessidade de planejamento de trajetória complexo (Splines, Curvas de Bezier).<br>
-
-Simplificamos o problema de um sistema **MIMO (Múltiplas Entradas, Múltiplas Saídas)** para dois sistemas simples **SISO (Entrada Única e Saída Única)**, onde o erro em X controla apenas a Junta 0 e o erro em Y controla apenas a Junta 1.<br>
-Se fossemos usar a Matriz Jacobiana de Imagem (a forma tradicional), o código teria que calcular matrizes 2x6, inverte-las e fazer multiplicação matricial a cada frame. Nossa abordagem heurística funciona perfeitamente para centralizar objetos sem essa sobrecarga computacional. A lógica diminuiu porque trocamos um **cálculo geométrico explícito** (pesado e extenso) por **controle reativo em malha fechada** (leve e iterativo). O robô não "sabe" onde o objeto está no espaço 3D, ele apenas sabe que precisa reduzir o erro na imagem para zero.
 
 ---
 
@@ -215,32 +184,63 @@ ros2 launch webots_ros2_universal_robot robot_world_launch.py
         ├── build/          # (Gerado pelo colcon)
         ├── install/        # (Gerado pelo colcon)
         ├── log/            # (Gerado pelo colcon)
-        └── src/            # <-- COLOQUE TODO O CÓDIGO ROS2 AQUI
+        └── src/            # <-- CÓDIGO FONTE DOS PACOTES
+            ├── arm_simulation/   # Pacote base de simulação e controle híbrido inicial
+            ├── keyboard_check/   # Nódulo para captura e publicação de teclas (Teleoperação)
+            ├── robot_extra/      # Desafios extras: Cinemática Inversa (IK) e Estimação de Profundidade
+            ├── robot_vision/     # Visão Computacional, IBVS e Máquina de Estados
+            └── webots_packed/    # Integração Webots-ROS2 e controladores principais
 ```
 
 ---
+## ⚙️ Abordagens e Funcionamento 
 
-## 💡 Boas Práticas (Git)
+Este projeto implementa três estratégias distintas de controle para o braço robótico UR5e, demonstrando uma evolução desde a operação manual até a autonomia baseada em geometria espacial.
 
-Recomendo fortemente adicionar um arquivo `.gitignore` para manter o repositório limpo.
+### 1. Teleoperação (Keyboard Control)
 
-Crie um arquivo chamado `.gitignore` na raiz do projeto com o seguinte conteúdo:
+A primeira camada de interação é feita através de um sistema de teleoperação manual desacoplado.
 
+- **Arquitetura:** Utilizamos o padrão _Publisher/Subscriber_. Um nó dedicado (`keyboard_publisher`) captura as teclas do terminal usando bibliotecas de baixo nível (`termios`/`tty`) para garantir uma leitura não bloqueante e sem necessidade de pressionar "Enter".
+    
+- **Abstração:** As teclas são mapeadas para códigos inteiros padronizados (ex: `W`=0, `S`=1, `UP`=4). Isso permite que o robô seja controlado por qualquer interface (teclado, joystick, web) desde que ela publique as mensagens corretas, sem alterar o código do controlador do robô.
+    
 
-```
-# Arquivos de compilação do ROS2
-workspace/trainee_ws/build/
-workspace/trainee_ws/install/
-workspace/trainee_ws/log/
+### 2. Controle Visual Reativo (IBVS)
 
-# Instalador do Webots (arquivo grande)
-webots-R2025a-x86-64.tar.bz2
+Adotamos uma arquitetura de Visual Servoing Baseado em Imagem **(IBVS - Image-Based Visual Servoing)** com uma abordagem heurística direta.
 
-# Arquivos de IDE
-.vscode/
-.idea/
-```
+- **Conceito:** Em vez de calcular onde o objeto está no mundo 3D, o robô reage ao erro na imagem 2D. Se o objeto está à esquerda na tela, a base gira para a esquerda.
+    
+- Controle Proporcional (P-Controller):
+    
+    A lei de controle é simples: Velocidade = Ganho (Kp) * Erro.
+    
+    - **Erro (e):** Diferença entre o centroide do objeto e o centro da imagem.
+        
+    - **Simplificação MIMO -> SISO:** O problema é tratado como dois sistemas independentes: o erro horizontal controla a Base (Yaw) e o erro vertical controla o Ombro (Pitch).
+        
+- **Vantagem:** Computacionalmente leve e robusto a erros de calibração, pois é um sistema de malha fechada que corrige o erro continuamente a cada frame (30Hz).
+    
 
+### 3. Autonomia Espacial (IK & Estimativa de Profundidade)
+
+Para tarefas de _Pick-and-Place_ que exigem precisão 3D, implementamos uma solução analítica completa no pacote `robot_extra`.
+
+- Estimativa de Profundidade (Sem Sensor 3D):
+    
+    Utilizamos apenas uma câmera monocular (RGB). A profundidade ($Z$) é calculada usando o modelo de câmera Pinhole e semelhança de triângulos, dado que conhecemos o tamanho real do objeto (bola de 7cm):
+    
+    $$Z = \frac{f \cdot R_{real}}{R_{pixel}}$$
+    
+- Transformações (TF2):
+    
+    O sistema converte as coordenadas do referencial da câmera (camera_link_optical) para o referencial da base do robô (base_link) usando a árvore de transformadas (TF Tree) do ROS2.
+    
+- Cinemática Inversa (IK):
+    
+    Diferente do IBVS, aqui o robô calcula explicitamente os ângulos das juntas. Utilizamos a biblioteca IKPy com o URDF do UR5e para calcular a solução matemática que leva o efetuador até a coordenada $(x, y, z)$ calculada, permitindo planejamento de trajetória preciso.
+    
 ---
 
 ## ❓ Troubleshooting
