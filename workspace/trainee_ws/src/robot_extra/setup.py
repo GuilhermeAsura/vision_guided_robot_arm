@@ -25,6 +25,7 @@ setup(
         'console_scripts': [
             'depth_estimator_node = robot_extra.depth_estimator_node:main',
             'robot_controller_node = robot_extra.robot_controller_node:main',
+            'ik_controller_node = robot_extra.ik_controller_node:main',
         ],
     },
 )

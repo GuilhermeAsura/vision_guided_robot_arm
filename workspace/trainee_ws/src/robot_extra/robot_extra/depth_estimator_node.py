@@ -8,6 +8,7 @@ import numpy as np
 import math
 import tf2_ros
 import tf2_geometry_msgs
+from rclpy.duration import Duration
 
 class DepthEstimatorNode(Node):
     def __init__(self):
@@ -22,12 +23,13 @@ class DepthEstimatorNode(Node):
         # Parâmetros Intrínsecos (Baseado no Webots)
         self.fov = 0.7854   # 45 graus
         self.img_w = 640
+        self.img_h = 480
         self.ball_radius = 0.07 # Raio real da bola (metros)
 
         # Distância focal (pixels)
         self.f = self.img_w / (2 * math.tan(self.fov / 2))
-        self.cx = 320 # Centro X da imagem
-        self.cy = 240 # Centro Y da imagem
+        self.cx = self.img_w / 2 # Centro X da imagem
+        self.cy = self.img_h / 2 # Centro Y da imagem
 
         # Publishers
         self.pub_cam_frame = self.create_publisher(PointStamped, '/vision/target_camera_frame', 10)
@@ -41,65 +43,91 @@ class DepthEstimatorNode(Node):
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
 
         self.get_logger().info("Depth Estimator (Robot Extra) Iniciado!")
+        self.get_logger().info(f"Aguardando transformações TF entre '{self.TARGET_FRAME}' e '{self.CAMERA_FRAME}'...")
 
     def image_callback(self, msg):
         try:
             cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
         except CvBridgeError:
             return
-
+            
+        if msg.width != self.img_w or msg.height != self.img_h:
+            self.img_w = msg.width
+            self.img_h = msg.height
+            
+            # Recalcula distância focal (f) e centros
+            self.f = self.img_w / (2 * math.tan(self.fov / 2))
+            self.cx = self.img_w / 2
+            self.cy = self.img_h / 2
+            
+            self.get_logger().info(f"Resolução detectada: {self.img_w}x{self.img_h}. Novo f: {self.f:.1f}")
+            
         # 1. Detectar Bola (Processamento de Imagem)
         center, radius_px = self.detect_ball(cv_image)
 
-        if center is not None and radius_px > 3:
+        if center is not None and radius_px > 10:
             u, v = center
             
             # 2. Calcular Z (Profundidade)
             # Z = (f * R_real) / R_pixel
             z_cam = (self.f * self.ball_radius) / radius_px
-
-            # 3. Calcular X e Y no frame da câmera
-            x_cam = (u - self.cx) * z_cam / self.f
-            y_cam = (v - self.cy) * z_cam / self.f
-
-            # 4. Criar mensagem PointStamped (Frame da Câmera)
-            point_cam = PointStamped()
-            point_cam.header = msg.header
-            # Se o header vier vazio do Webots, forçamos o nome
-            if not point_cam.header.frame_id:
-                point_cam.header.frame_id = self.CAMERA_FRAME
             
+            cv2.circle(cv_image, (int(u), int(v)), int(radius_px), (0, 255, 0), 2)
+            cv2.putText(cv_image, f"Z: {z_cam:.2f}m", (int(u), int(v)-10), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
+            
+            if z_cam > 2.0 or z_cam < 0.15:
+                self.get_logger().warn(f"Inalcançável: {z_cam:.2f}m. Ignorando...", throttle_duration_sec=1)
+                cv2.imshow("Robot Extra Vision", cv_image)
+                cv2.waitKey(1)
+                return
+                
+            # 3. Calcular X e Y no frame da câmera (OPTICAL FRAME CONVENTION)
+            # IMPORTANTE: Optical frame tem X apontando para FRENTE (profundidade)
+            # - X no optical frame = profundidade = z_cam
+            # - Y no optical frame = deslocamento horizontal (para esquerda é positivo)
+            # - Z no optical frame = deslocamento vertical (para cima é positivo)
+            
+            # Coordenadas da imagem para coordenadas da câmera (convenção optical frame):
+            x_cam = z_cam  # Profundidade vai para X
+            y_cam = -(u - self.cx) * z_cam / self.f  # Horizontal (invertido: esquerda é positivo)
+            z_cam_vertical = -(v - self.cy) * z_cam / self.f  # Vertical (invertido: cima é positivo)
+
+            # 4. Criar mensagem
+            point_cam = PointStamped()
+            point_cam.header.stamp = self.get_clock().now().to_msg()
+            point_cam.header.frame_id = self.CAMERA_FRAME
             point_cam.point.x = x_cam
             point_cam.point.y = y_cam
-            point_cam.point.z = z_cam
+            point_cam.point.z = z_cam_vertical
             
-            # Publica sempre (útil para Visual Servoing relativo)
             self.pub_cam_frame.publish(point_cam)
 
-            # 5. Tentar Transformar para o Mundo/Base (Cinemática Inversa Global)
+            # 5. Transformar para frame do mundo
+            # CORREÇÃO CRÍTICA: Usar rclpy.time.Time() para pegar transformação mais recente
             try:
-                # Procura a transformação mais recente disponível
+                # Usar transformação mais recente disponível (Time() = tempo zero)
                 transform = self.tf_buffer.lookup_transform(
                     self.TARGET_FRAME,
-                    point_cam.header.frame_id,
-                    rclpy.time.Time()) # Time(0) pega a última disponível
-                
+                    self.CAMERA_FRAME,
+                    rclpy.time.Time(),  # Usar transformação mais recente!
+                    timeout=Duration(seconds=0.5))  # Timeout maior para segurança
+                    
                 point_world = tf2_geometry_msgs.do_transform_point(point_cam, transform)
                 self.pub_world_frame.publish(point_world)
                 
-                # Debug no terminal
+                # Debug melhorado
                 self.get_logger().info(
-                    f"ALVO MUNDO -> X: {point_world.point.x:.2f} | Y: {point_world.point.y:.2f} | Z: {point_world.point.z:.2f}", 
-                    throttle_duration_sec=1.0)
+                    f"CAM(x={x_cam:.2f}, y={y_cam:.2f}, z={z_cam_vertical:.2f}) -> "
+                    f"MUNDO(x={point_world.point.x:.2f}, y={point_world.point.y:.2f}, z={point_world.point.z:.2f})", 
+                    throttle_duration_sec=0.5)
 
-            except Exception as e:
-                # Se falhar o TF, avisamos mas não paramos o nó
-                self.get_logger().warn(f"Sem TF disponível: {e}. Usando apenas coordenadas da câmera.", throttle_duration_sec=2.0)
-
-            # Desenho para Debug
-            cv2.circle(cv_image, (int(u), int(v)), int(radius_px), (0, 255, 0), 2)
-            cv2.putText(cv_image, f"Z: {z_cam:.2f}m", (int(u), int(v)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0,255,0))
-
+            except (tf2_ros.LookupException, tf2_ros.ConnectivityException, 
+                    tf2_ros.ExtrapolationException) as e:
+                self.get_logger().warn(
+                    f"Transformação TF não disponível: {str(e)}", 
+                    throttle_duration_sec=2.0)
+        
         cv2.imshow("Robot Extra Vision", cv_image)
         cv2.waitKey(1)
 

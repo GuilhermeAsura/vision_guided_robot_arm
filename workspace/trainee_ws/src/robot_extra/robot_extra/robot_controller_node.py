@@ -97,17 +97,17 @@ class WebotsSubscriber(Node):
 
         updated = False
 
-        # --- AXIS 1: ALIGN YAW (Base) ---
+        # AXIS 1: ALIGN YAW (Base)
         if abs(ex) > deadzone:
             self.joint_positions[0] += (ex * kp_yaw * 0.1)
             updated = True
 
-        # --- AXIS 2: ALIGN PITCH (Shoulder) ---
+        # AXIS 2: ALIGN PITCH (Shoulder)
         if abs(ey) > deadzone:
             self.joint_positions[1] -= (ey * kp_pitch * 0.1)
             updated = True
 
-        # --- AXIS 3: APPROACH (Elbow) ---
+        # AXIS 3: APPROACH (Elbow)
         # Relaxed logic: approach if roughly aligned (was 0.15, now 0.30)
         # This prevents the robot from freezing Z when X/Y are fighting
         if abs(ex) < 0.30 and abs(ey) < 0.30:
